@@ -1,0 +1,37 @@
+<article>
+  <header>
+    <h1 class="title">
+      {{#link-to model.type model.slug}}{{model.title}}{{/link-to}}
+    </h1>
+    <time class="published">Posted {{model.date}}</time>
+    <p class="author">By {{model.author.name}}</p>
+  </header>
+  <div class="entry-content">
+    {{{model.content}}}
+  </div>
+  <div class="taxonomies">
+    {{#if model.tags}}
+    <div class="tax-tags">
+      <p>
+        Tagged
+        <ul>
+          {{#each model.tags}}
+            <li>{{name}}</li>
+          {{/each}}
+        </ul>
+      </p>
+    </div>
+    {{/if}}
+
+    {{#if model.categories}}
+    <div class="tax-cats">
+      Categories:
+      <ul>
+        {{#each model.categories}}
+          <li>{{name}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+  </div>
+</article>

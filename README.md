@@ -1,11 +1,12 @@
 # Ember-cli-wordpress
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This Ember-cli app provides an Ember.js frontend for a Wordpress backend.
 
 ## Prerequisites
 
-You will need the following things properly installed on your computer.
+You will need the [WP-API](https://github.com/WP-API/WP-API) plugin installed on your Wordpress site in order to expose a RESTful API to use in your Ember app.
+
+You will also need the following things properly installed on your computer.
 
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM)
@@ -19,6 +20,15 @@ You will need the following things properly installed on your computer.
 * change into the new directory
 * `npm install`
 * `bower install`
+* Modify `config/environment.js` to add your Wordpress API endpoint and namespace
+
+```
+// config/environment.js
+ENV.wordpress = {
+  host: "http://<your-wordpress-api.com>",
+  namespace: "wp-json"
+};
+```
 
 ## Running / Development
 
@@ -39,10 +49,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
-
-Specify what it takes to deploy your app.
-
 ## Further Reading / Useful Links
 
 * [ember.js](http://emberjs.com/)
@@ -50,4 +56,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
