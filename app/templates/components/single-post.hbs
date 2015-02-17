@@ -15,8 +15,8 @@
       <p>
         Tagged
         <ul>
-          {{#each model.tags}}
-            <li>{{name}}</li>
+          {{#each tag in model.tags}}
+            <li>{{tag.name}}</li>
           {{/each}}
         </ul>
       </p>
@@ -27,8 +27,8 @@
     <div class="tax-cats">
       Categories:
       <ul>
-        {{#each model.categories}}
-          <li>{{name}}</li>
+        {{#each category in model.categories}}
+          <li>{{category.name}}</li>
         {{/each}}
       </ul>
     </div>
