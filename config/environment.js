@@ -43,5 +43,10 @@ module.exports = function(environment) {
 
   }
 
+  ENV.wordpress = {
+    host: "http://climbingnarc.com",
+    namespace: "wp-json"
+  }
+
   return ENV;
 };

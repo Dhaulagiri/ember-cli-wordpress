@@ -1,7 +1,7 @@
 <h2>Latest Posts</h2>
 
 <section id="main">
-  {{#each}}
-    {{single-post model=this}}
+  {{#each post in model}}
+    {{single-post model=post}}
   {{/each}}
 </section>
